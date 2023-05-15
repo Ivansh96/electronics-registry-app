@@ -59,23 +59,23 @@ public class ModelEntity {
 
     @Transient
     @JsonIgnore
-    ElectronicsType equipmentType;
+    ElectronicsType electronicsType;
     @PrePersist
     protected void roleInit() {
         if(type.getName().equalsIgnoreCase("Телевизор")) {
-            equipmentType = ElectronicsType.TV;
+            electronicsType = ElectronicsType.TV;
         }
         if(type.getName().equalsIgnoreCase("Смартфон")) {
-            equipmentType = ElectronicsType.SMARTPHONE;
+            electronicsType = ElectronicsType.SMARTPHONE;
         }
         if(type.getName().equalsIgnoreCase("Компьютер")) {
-            equipmentType = ElectronicsType.PC;
+            electronicsType = ElectronicsType.PC;
         }
         if(type.getName().equalsIgnoreCase("Холодильник")) {
-            equipmentType = ElectronicsType.FRIDGE;
+            electronicsType = ElectronicsType.FRIDGE;
         }
         if(type.getName().equalsIgnoreCase("Пылесос")) {
-            equipmentType = ElectronicsType.VACUUM;
+            electronicsType = ElectronicsType.VACUUM;
         }
     }
 }

@@ -22,5 +22,5 @@ public class ModelCreateDto {
     String compressor;
     Integer sizeOfDustCollector;
     Integer numberOfModes;
-    ElectronicsType type;
+    ElectronicsCreateDto type;
 }

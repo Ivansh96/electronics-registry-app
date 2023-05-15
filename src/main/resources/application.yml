@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/electronic_registry
+    username: postgres
+    password: 170696
+  jpa:
+    properties.hibernate:
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate
+      use-new-id-generator-mappings: false
+      default_schema: public
+
+  logging:
+    level:
+      root:
+        org.springframework.jdbc.core: TRACE

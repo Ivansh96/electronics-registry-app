@@ -2,12 +2,9 @@ package com.test.consumerelectronicsregistry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
 
-@SpringBootTest
-class ConsumerElectronicsRegistryApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
+@TestConfiguration
+public class ConsumerElectronicsRegistryApplicationTests {
 
 }

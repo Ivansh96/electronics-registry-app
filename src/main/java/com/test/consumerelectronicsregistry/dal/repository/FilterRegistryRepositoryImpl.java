@@ -3,8 +3,6 @@ package com.test.consumerelectronicsregistry.dal.repository;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.test.consumerelectronicsregistry.dal.entity.ElectronicsEntity;
 import com.test.consumerelectronicsregistry.dal.entity.ModelEntity;
-import com.test.consumerelectronicsregistry.dal.entity.QElectronicsEntity;
-import com.test.consumerelectronicsregistry.dal.entity.QModelEntity;
 import com.test.consumerelectronicsregistry.dal.querydsl.QPredicates;
 import com.test.consumerelectronicsregistry.filter.*;
 import lombok.RequiredArgsConstructor;

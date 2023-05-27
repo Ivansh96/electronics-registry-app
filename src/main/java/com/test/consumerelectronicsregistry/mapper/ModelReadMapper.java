@@ -13,7 +13,7 @@ public class ModelReadMapper implements Mapper<ModelEntity, ModelReadDto> {
                 object.getElectronicsType(),
                 object.getName(),
                 object.getSerialNumber(),
-                object.getColour(),
+                object.getColor(),
                 object.getSize(),
                 object.getPrice(),
                 object.getModelInStock(),

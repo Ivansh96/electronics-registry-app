@@ -18,7 +18,7 @@ public class ModelCreateMapper implements Mapper<ModelCreateDto, ModelEntity> {
         ModelEntity model = new ModelEntity();
         model.setName(object.getName());
         model.setSerialNumber(object.getSerialNumber());
-        model.setColour(object.getColour());
+        model.setColor(object.getColour());
         model.setSize(object.getSize());
         model.setPrice(object.getPrice());
         model.setModelInStock(object.getModelInStock());

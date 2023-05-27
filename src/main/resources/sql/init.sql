@@ -1,32 +1,32 @@
 CREATE TABLE electronics_registry
 (
-    id                               uuid NOT NULL PRIMARY KEY,
-    наименование                     varchar(50),
-    страна_производитель             varchar(50),
-    фирма_производитель              varchar(50),
-    возможность_заказа_онлайн        varchar(3),
-    возможность_оформления_рассрочки varchar(3)
+    id           uuid NOT NULL PRIMARY KEY,
+    name         varchar(50),
+    country      varchar(50),
+    brand        varchar(50),
+    online_order varchar(3),
+    credit       varchar(3)
 );
 
 
 CREATE TABLE models
 (
-    id                 uuid NOT NULL PRIMARY KEY,
-    вид_техники        uuid REFERENCES electronics_registry (id),
-    наименование       varchar(50),
-    серийный_номер     int,
-    цвет               varchar(50),
-    размер             int,
-    цена               int,
-    модель_на_складе   varchar(3),
-    категория_тв       varchar(50),
-    технология_тв      varchar(50),
-    память_смартфона   int,
-    количество_камер   int,
-    категория_пк       varchar(50),
-    тип_процессора     varchar(50),
-    количество_дверей  int,
-    тип_компрессора    varchar(50),
-    объем_пылесборника int,
-    количество_режимов int
+    id                  uuid NOT NULL PRIMARY KEY,
+    type_id             uuid REFERENCES electronics_registry (id),
+    name                varchar(50),
+    serial_number       int,
+    color               varchar(50),
+    size                int,
+    price               int,
+    model_in_stock      varchar(3),
+    tv_category         varchar(50),
+    tv_technology       varchar(50),
+    memory              int,
+    cameras_quantity    int,
+    pc_category         varchar(50),
+    processor           varchar(50),
+    doors_quantity      int,
+    compressor          varchar(50),
+    dust_collector_size int,
+    number_of_modes     int
 );

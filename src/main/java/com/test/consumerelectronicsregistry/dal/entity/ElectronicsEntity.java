@@ -18,21 +18,12 @@ public class ElectronicsEntity {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
-
-    @Column(name = "наименование")
     private String name;
-
-    @Column(name = "страна_производитель")
     private String country;
-
-    @Column(name = "фирма_производитель")
     private String brand;
-    @Column(name = "возможность_заказа_онлайн")
+    @Column(name = "online_order")
     private String onlineOrder;
-
-    @Column(name = "возможность_оформления_рассрочки")
     private String credit;
-
     @OneToMany(mappedBy = "type",
             cascade = CascadeType.ALL,
             orphanRemoval = true,

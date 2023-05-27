@@ -20,41 +20,35 @@ public class ModelEntity {
     @GeneratedValue(generator = "UUID")
     @JsonIgnore
     private UUID id;
-    @Column(name = "наименование")
     private String name;
-    @Column(name = "серийный_номер")
+    @Column(name = "serial_number")
     private Integer serialNumber;
-    @Column(name = "цвет")
-    private String colour;
-    @Column(name = "размер")
+    private String color;
     private Integer size;
-    @Column(name = "цена")
     private Integer price;
-    @Column(name = "модель_на_складе")
+    @Column(name = "model_in_stock")
     private String modelInStock;
-    @Column(name = "категория_тв")
+    @Column(name = "tv_category")
     private String tvCategory;
-    @Column(name = "технология_тв")
+    @Column(name = "tv_technology")
     private String tvTechnology;
-    @Column(name = "память_смартфона")
+    @Column(name = "memory")
     private Integer smartphoneMemory;
-    @Column(name = "количество_камер")
+    @Column(name = "cameras_quantity")
     private Integer numberOfCameras;
-    @Column(name = "категория_пк")
+    @Column(name = "pc_category")
     private String pcCategory;
-    @Column(name = "тип_процессора")
     private String processor;
-    @Column(name = "количество_дверей")
+    @Column(name = "doors_quantity")
     private Integer numberOfDoors;
-    @Column(name = "тип_компрессора")
     private String compressor;
-    @Column(name = "объем_пылесборника")
+    @Column(name = "dust_collector_size")
     private Integer sizeOfDustCollector;
-    @Column(name = "количество_режимов")
+    @Column(name = "number_of_modes")
     private Integer numberOfModes;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "вид_техники", referencedColumnName = "id")
+    @JoinColumn(name = "type_id", referencedColumnName = "id")
     private ElectronicsEntity type;
 
     @Transient

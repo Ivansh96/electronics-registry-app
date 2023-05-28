@@ -26,13 +26,10 @@ public class ModelRestController {
     public ModelResponse getModelsByFilters(ModelsSearchFilter filter) {
         return new ModelResponse(new ArrayList<>(filterService.findAllByFilter(filter)));
     }
-
     @GetMapping("/price-filter")
     public ModelResponse getModelsByPrice(Integer from, Integer to) {
         return new ModelResponse(new ArrayList<>(filterService.findAllByPriceBetween(from, to)));
     }
-
-
     @GetMapping("/category/tv")
     public ModelResponse getTvModels(TvSearchFilter filter) {
         return new ModelResponse(new ArrayList<>(filterService.tvFilterAttributes(filter)));
@@ -53,13 +50,11 @@ public class ModelRestController {
     public ModelResponse getVacuumModels(VacuumSearchFilter filter) {
         return new ModelResponse(new ArrayList<>(filterService.vacuumFilterAttributes(filter)));
     }
-
     @GetMapping("/{id}")
     public ModelReadDto getModelById(@PathVariable("id") UUID id) {
         return filterService.findById(id)
                 .orElseThrow(ModelNotFoundException::new);
     }
-
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public ModelReadDto addModel(@Validated({Default.class}) @RequestBody ModelCreateDto model) {
